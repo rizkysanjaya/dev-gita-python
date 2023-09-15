@@ -247,7 +247,7 @@ def hapusKegiatan(id):
 # reusables functions insert
 def insert_source(table_name, columns, values, data):
     try:
-        conn = psycopg2.connect(**config())
+        conn = psycopg2.connect(**db_params)
         cur = conn.cursor()
 
         sql = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(values))})"

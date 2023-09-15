@@ -1,9 +1,9 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect, url_for
 # from flask import Bearer
 from api import *
 # from api.book_api import book_api  # Import other blueprints as needed
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates")
 
 # Configure the app if needed (e.g., database settings)
 app.config['SECRET_KEY'] = 'your_secret_key'
@@ -24,7 +24,8 @@ app.register_blueprint(user_api)
 # Home
 @app.route('/')
 def home():
-    return 'Welcome to the home page!'
+    return render_template('dashboard.html')
+
 
 if __name__ == '__main__':
      app.run(debug=True)
