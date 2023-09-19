@@ -1,0 +1,49 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<h1>Welcome to Dashboard</h1>
+		<a href="{{url_for('auth_api.login')}}" type="button">Login Page</a>
+		<ul>
+			<h4>Kegiatan API</h4>
+			<li>
+				<a href="{{url_for('kegiatan_api.getDraftKegiatan')}}" type="button">
+					Draft
+				</a>
+			</li>
+
+			<li>
+				<a href="{{url_for('kegiatan_api.getKegiatan')}}" type="button">
+					All Kegiatan
+				</a>
+			</li>
+			<li>
+				<a href="{{url_for('kegiatan_api.getKegiatan')}}" type="button">
+					Tambah Kegiatan
+				</a>
+			</li>
+			<li>
+				<a href="{{url_for('kegiatan_api.getKegiatan')}}" type="button">
+					Update Kegiatan
+				</a>
+			</li>
+			<li>
+				<a href="{{url_for('kegiatan_api.getKegiatan')}}" type="button">
+					Delete Kegiatan
+				</a>
+			</li>
+			<li>
+				<a href="/api/kegiatan/12" type="button">Detail Kegiatan</a>
+			</li>
+		</ul>
+		<ul>
+			<h4>Users API</h4>
+			<li><a href="#" type="button">-</a></li>
+			<li><a href="#" type="button">-</a></li>
+			<li><a href="#" type="button">-</a></li>
+		</ul>
+	</body>
+</html>
